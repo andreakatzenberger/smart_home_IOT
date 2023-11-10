@@ -2,5 +2,9 @@
     "DHT1": {
         "simulated": true,
         "pin": 17
+    },
+    "DS1":{
+        "simulated": false,
+        "pin": 1
     } 
 }

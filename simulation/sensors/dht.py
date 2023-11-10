@@ -1,6 +1,8 @@
-
-import RPi.GPIO as GPIO
 import time
+try:
+	import RPi.GPIO as GPIO
+except:
+	pass
 
 class DHT(object):
 	DHTLIB_OK = 0
@@ -17,6 +19,8 @@ class DHT(object):
 	def __init__(self,pin):
 		self.pin = pin
 		self.bits = [0,0,0,0,0]
+
+		
 	#Read DHT sensor, store the original data in bits[]	
 	def readSensor(self,pin,wakeupDelay):
 		mask = 0x80
@@ -62,6 +66,8 @@ class DHT(object):
 		GPIO.setup(pin,GPIO.OUT)
 		GPIO.output(pin,GPIO.HIGH)
 		return self.DHTLIB_OK
+	
+
 	#Read DHT sensor, analyze the data of temperature and humidity
 	def readDHT11(self):
 		rv = self.readSensor(self.pin,self.DHTLIB_DHT11_WAKEUP)
@@ -76,6 +82,7 @@ class DHT(object):
 			return self.DHTLIB_ERROR_CHECKSUM
 		return self.DHTLIB_OK
 
+
 def parseCheckCode(code):
 	if code == 0:
 		return "DHTLIB_OK"
@@ -87,12 +94,13 @@ def parseCheckCode(code):
 		return "DHTLIB_INVALID_VALUE"
 
 
-def run_dht_loop(dht, delay, callback, stop_event):
+def run_dht_loop(dht, delay, callback, stop_event, print_lock):
 		while True:
+			time.sleep(delay)  # Delay between readings
 			check = dht.readDHT11()
 			code = parseCheckCode(check)
 			humidity, temperature = dht.humidity, dht.temperature
-			callback(humidity, temperature, code)
+			with print_lock:
+				callback(humidity, temperature, code)
 			if stop_event.is_set():
 					break
-			time.sleep(delay)  # Delay between readings
