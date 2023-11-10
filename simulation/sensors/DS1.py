@@ -5,23 +5,20 @@ except:
 	pass
 
 class DS1(object):
-	
-	#state 0  = zakljucano???  ako je dugme povezano an GND i PUD_UP
-	def __init__(self, pin):
-		self.pin = pin
-		self.state = 1
+    def __init__(self, pin, initial_state=0):
+        self.pin = pin
+        self.state = initial_state
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(self.pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+        GPIO.add_event_detect(self.pin, GPIO.BOTH, callback=self.change_detected, bouncetime=50)
 
-	def change_detected(self):
-		input = GPIO.input(self.pin)
-		if input != self.state:
-			self.state = input
+    def change_detected(self, channel):
+        input_state = GPIO.input(self.pin)
+        if input_state != self.state:
+            self.state = input_state
 
-	def readDS1(self):
-		GPIO.setmode(GPIO.BCM)
-		GPIO.setup(self.pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-		GPIO.add_event_detect(self.pin, GPIO.BOTH, callback=self.change_detected, bouncetime=50)
-
-		return self.state
+    def readDS1(self):
+        return self.state
 
 def parseState(code):
 	if code == 1:
