@@ -17,10 +17,10 @@ class DS1(object):
         if input_state != self.state:
             self.state = input_state
 
-    def readDS1(self):
+    def read_ds1(self):
         return self.state
 
-def parseState(code):
+def parse_state(code):
 	if code == 1:
 		return "OPEN"
 	if code == 0:
@@ -29,8 +29,8 @@ def parseState(code):
 def run_ds1_loop(ds1, delay, callback, stop_event, print_lock):
 		while True:
 			time.sleep(delay)  # Delay between readings
-			code = ds1.readDS1()
-			state = parseState(code)
+			code = ds1.read_ds1()
+			state = parse_state(code)
 			with print_lock:
 				callback(state)
 			if stop_event.is_set():

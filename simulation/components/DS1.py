@@ -1,4 +1,4 @@
-from simulators.DS1 import run_ds1_simulator
+from simulators.DS1 import run_ds1_simulator, DS1_sim
 from sensors.DS1 import run_ds1_loop, DS1
 import threading
 import time
@@ -12,7 +12,8 @@ def ds1_callback(state):
 def run_ds1(settings, threads, stop_event, delay, print_lock):
         if settings['simulated']:
             print("Starting DS1 sumilator")
-            ds1_thread = threading.Thread(target = run_ds1_simulator, args=(delay, ds1_callback, stop_event, print_lock))
+            ds1 = DS1_sim()
+            ds1_thread = threading.Thread(target = run_ds1_simulator, args=(ds1, delay, ds1_callback, stop_event, print_lock))
             ds1_thread.start()
             threads.append(ds1_thread)
             print("DS1 sumilator started")
