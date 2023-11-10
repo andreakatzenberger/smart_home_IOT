@@ -4,7 +4,7 @@
         "pin": 17
     },
     "DS1":{
-        "simulated": false,
+        "simulated": true,
         "pin": 1
     } 
 }
