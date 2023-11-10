@@ -3,7 +3,6 @@ import threading
 from settings import load_settings
 from components.dht import run_dht
 import time
-
 try:
     import RPi.GPIO as GPIO
     GPIO.setmode(GPIO.BCM)
