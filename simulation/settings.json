@@ -9,6 +9,9 @@
     }, 
     "DB":{
         "simulated":true,
+    },
+    "DL":{
+        "simulated": true,
         "pin": 18
     }
 }
