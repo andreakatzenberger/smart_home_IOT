@@ -24,7 +24,8 @@ if __name__ == "__main__":
         run_dht(dht1_settings, threads, stop_event, delay, print_lock)  
 
         ds1_settings = settings['DS1']
-        run_ds1(ds1_settings, threads, stop_event, delay, print_lock)
+        db_settings = settings['DB']
+        run_ds1(ds1_settings, db_settings, threads, stop_event, delay, print_lock)
 
         dl_settings = settings['DL']
         run_dl(dl_settings, threads, stop_event, delay, print_lock)
@@ -36,3 +37,5 @@ if __name__ == "__main__":
         print('Stopping app: smart_home_iot')
         for t in threads:
             stop_event.set()  
+
+        #GPIO.cleanup()
