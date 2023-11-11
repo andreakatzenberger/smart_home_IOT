@@ -1,8 +1,8 @@
-
 import threading
 from settings import load_settings
 from components.dht import run_dht
 from components.DS1 import run_ds1
+from components.DL import run_dl
 import time
 
 try:
@@ -25,6 +25,9 @@ if __name__ == "__main__":
 
         ds1_settings = settings['DS1']
         run_ds1(ds1_settings, threads, stop_event, delay, print_lock)
+
+        dl_settings = settings['DL']
+        run_dl(dl_settings, threads, stop_event, delay, print_lock)
 
         while True:
             time.sleep(3)
