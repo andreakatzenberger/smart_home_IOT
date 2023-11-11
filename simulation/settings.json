@@ -1,17 +1,22 @@
 {
-    "DHT1": {
-        "simulated": true,
-        "pin": 17
-    },
-    "DS1":{
-        "simulated": true,
-        "pin": 17
-    }, 
-    "DB":{
-        "simulated":true,
-    },
-    "DL":{
-        "simulated": true,
-        "pin": 18
-    }
+  "DHT1": {
+    "simulated": true,
+    "pin": 17
+  },
+  "DS1": {
+    "simulated": true,
+    "pin": 17
+  },
+  "DB": {
+    "simulated": true,
+    "pin": 17
+  },
+  "DL": {
+    "simulated": true,
+    "pin": 18
+  },
+  "DPIR1": {
+    "simulated": true,
+    "pin": 17
+  }
 }

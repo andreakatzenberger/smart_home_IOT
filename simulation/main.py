@@ -3,6 +3,7 @@ from settings import load_settings
 from components.dht import run_dht
 from components.DS1 import run_ds1
 from components.DL import run_dl
+from components.DPIR1 import run_dpir1
 import time
 
 try:
@@ -29,6 +30,8 @@ if __name__ == "__main__":
 
         dl_settings = settings['DL']
         run_dl(dl_settings, threads, stop_event, delay, print_lock)
+        dpir1_settings = settings['DPIR1']
+        run_dpir1(dpir1_settings, threads, stop_event, delay, print_lock)
 
         while True:
             time.sleep(3)
