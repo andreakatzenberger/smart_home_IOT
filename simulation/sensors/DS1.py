@@ -1,14 +1,13 @@
 import time
 try:
-	import RPi.GPIO as GPIO
+    import RPi.GPIO as GPIO
 except:
-	pass
+    pass
 
 class DS1(object):
-    def __init__(self, pin, initial_state=0):
+    def __init__(self, pin,initial_state=0):
         self.pin = pin
         self.state = initial_state
-        GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
         GPIO.add_event_detect(self.pin, GPIO.BOTH, callback=self.change_detected, bouncetime=50)
 
@@ -21,17 +20,22 @@ class DS1(object):
         return self.state
 
 def parse_state(code):
-	if code == 1:
-		return "OPEN"
-	if code == 0:
-		return "CLOSED"
-	
-def run_ds1_loop(ds1, delay, callback, stop_event, print_lock):
-		while True:
-			time.sleep(delay)  # Delay between readings
-			code = ds1.read_ds1()
-			state = parse_state(code)
-			with print_lock:
-				callback(state)
-			if stop_event.is_set():
-					break
+    if code == 1:
+        return "OPEN"
+    if code == 0:
+        return "CLOSED"
+    
+def run_ds1_loop(ds1, db, delay, callback, stop_event, print_lock):
+        initial_state = parse_state(ds1.read_ds1())
+        while True:
+            time.sleep(delay)  # Delay between readings
+            state = parse_state(ds1.read_ds1())
+
+            if(state != initial_state):
+                initial_state = state
+                with print_lock:
+                    callback(state)
+                    if state == "OPEN":
+                        db.buzz()
+            if stop_event.is_set():
+                    break
