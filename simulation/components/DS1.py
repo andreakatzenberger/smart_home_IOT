@@ -13,12 +13,12 @@ def ds1_callback(state):
 def run_ds1(settings, db_settings, threads, stop_event, delay, print_lock):
         db = DB(db_settings['simulated'], db_settings['pin'])
         if settings['simulated']:
-            print("Starting DS1 sumilator")
+            print("Starting DS1 simualtor")
             ds1 = DS1_sim()
             ds1_thread = threading.Thread(target = run_ds1_simulator, args=(ds1, db, delay, ds1_callback, stop_event, print_lock))
             ds1_thread.start()
             threads.append(ds1_thread)
-            print("DS1 sumilator started")
+            print("DS1 simualtor started")
         else:
             print("Starting DS1 loop")
             ds1 = DS1(settings['pin'])

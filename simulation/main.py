@@ -6,11 +6,12 @@ from components.DL import run_dl
 from components.DPIR1 import run_dpir1
 from components.RPIR1 import run_rpir1
 from components.RPIR2 import run_rpir2
+from components.DMS import run_dms
 import time
 
 try:
     import RPi.GPIO as GPIO
-
+    GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
 except:
     pass
@@ -26,14 +27,14 @@ if __name__ == "__main__":
     try:
         dht1_settings = settings['DHT1']
         run_dht(dht1_settings, threads, stop_event, delay, print_lock)
-
         ds1_settings = settings['DS1']
         db_settings = settings['DB']
         run_ds1(ds1_settings, db_settings, threads, stop_event, delay, print_lock)
+        dms_settings = settings['DMS']
+        run_dms(dms_settings, threads, stop_event, print_lock)
 
         dl_settings = settings['DL']
         run_dl(dl_settings, threads, stop_event, delay, print_lock)
-
         dpir1_settings = settings['DPIR1']
         run_dpir1(dpir1_settings, threads, stop_event, delay, print_lock)
         rpir1_settings = settings['RPIR1']
