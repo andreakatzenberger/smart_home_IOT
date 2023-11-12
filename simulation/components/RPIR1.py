@@ -16,12 +16,12 @@ def pir_callback(state):
 
 def run_rpir1(settings, threads, stop_event, delay, print_lock):
     if settings['simulated']:
-        print("Starting RPIR1 sumilator")
+        print("Starting RPIR1 simualtor")
         rpir1_thread = threading.Thread(target=run_pir_simulator,
                                         args=(delay, pir_callback, stop_event, print_lock))
         rpir1_thread.start()
         threads.append(rpir1_thread)
-        print("RPIR1 sumilator started")
+        print("RPIR1 simualtor started")
     else:
         print("Starting RPIR1 loop")
         rpir1 = PIR(settings['pin'])
