@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1b17381-a755-4843-a4f0-5c59d99986af" name="Changes" comment="" />
+    <list default="true" id="e1b17381-a755-4843-a4f0-5c59d99986af" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation/components/DPIR1.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation/components/DPIR1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation/sensors/DPIR1.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation/sensors/PIR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/simulation/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation/simulators/DPIR1.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation/simulators/PIR.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +26,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Y2HA6mpOlnKiHVD7lcnEQaV8yT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,7 +36,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -37,5 +50,16 @@
       <updated>1699716612854</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/simulation/simulators/DS1.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

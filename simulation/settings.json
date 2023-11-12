@@ -13,9 +13,17 @@
   },
   "DL": {
     "simulated": true,
-    "pin": 18
+    "pin": 17
   },
   "DPIR1": {
+    "simulated": true,
+    "pin": 17
+  },
+  "RPIR1": {
+    "simulated": true,
+    "pin": 17
+  },
+  "RPIR2": {
     "simulated": true,
     "pin": 17
   }
