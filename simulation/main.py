@@ -7,10 +7,12 @@ from components.DPIR1 import run_dpir1
 from components.RPIR1 import run_rpir1
 from components.RPIR2 import run_rpir2
 from components.DMS import run_dms
+from components.DUS1 import run_dus1
 import time
 
 try:
     import RPi.GPIO as GPIO
+
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
 except:
@@ -41,6 +43,8 @@ if __name__ == "__main__":
         run_rpir1(rpir1_settings, threads, stop_event, delay, print_lock)
         rpir2_settings = settings['RPIR2']
         run_rpir2(rpir2_settings, threads, stop_event, delay, print_lock)
+        dus1_settings = settings['DUS1']
+        run_dus1(dus1_settings, threads, stop_event, delay, print_lock)
 
         while True:
             time.sleep(3)
