@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1b17381-a755-4843-a4f0-5c59d99986af" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/simulation/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation/components/DUS1.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation/components/DUS1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
