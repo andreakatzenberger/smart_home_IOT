@@ -25,14 +25,12 @@ def parse_state(code):
 	if code == 0:
 		return "CLOSED"
 	
-def run_ds1_simulator(ds1, db, delay, callback, stop_event, print_lock):
+def run_ds1_simulator(ds1, callback, stop_event, print_lock):
     while True:
         code = ds1.wait_for_key()
         state = parse_state(code)
         with print_lock:
             callback(state)
-            if state == "OPEN":
-                db.buzz()
         if stop_event.is_set():
             break
               

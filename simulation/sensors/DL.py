@@ -1,5 +1,5 @@
 import time
-
+import keyboard
 try:
     import RPi.GPIO as GPIO
 except:
