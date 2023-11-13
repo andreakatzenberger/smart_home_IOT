@@ -9,9 +9,9 @@ def pir_callback(state):
     print("\n\n" + "=" * 10 + "RPIR1" + "=" * 10)
     print(f"Timestamp: {time.strftime('%H:%M:%S', t)}")
     if state == 1:
-        print(f"Motion detected\n")
+        print(f"Motion detected")
     elif state == 0:
-        print(f"Motion not detected\n")
+        print(f"Motion not detected")
 
 
 def run_rpir1(settings, threads, stop_event, delay, print_lock):
