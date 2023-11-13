@@ -25,17 +25,14 @@ def parse_state(code):
     if code == 0:
         return "CLOSED"
     
-def run_ds1_loop(ds1, db, delay, callback, stop_event, print_lock):
+def run_ds1_loop(ds1, delay, callback, stop_event, print_lock):
         initial_state = parse_state(ds1.read_ds1())
         while True:
             time.sleep(delay)  # Delay between readings
             state = parse_state(ds1.read_ds1())
-
             if(state != initial_state):
                 initial_state = state
                 with print_lock:
                     callback(state)
-                    if state == "OPEN":
-                        db.buzz()
             if stop_event.is_set():
                     break
