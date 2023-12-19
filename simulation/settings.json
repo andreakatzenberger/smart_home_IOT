@@ -17,19 +17,27 @@
   },
   "DL": {
     "simulated": true,
-    "pin": 17
+    "pin": 17,
+    "runs_on": "PI1",
+    "name": "DL"
   },
   "DPIR1": {
     "simulated": true,
-    "pin": 17
+    "pin": 17,
+    "runs_on": "PI1",
+    "name": "DPIR1"
   },
-  "RPIR1": {
-    "simulated": true,
-    "pin": 17
+  "RPIR1":{
+      "simulated": true,
+      "pin": 17,
+      "runs_on": "PI1",
+      "name": "RPIR1"
   },
-  "RPIR2": {
-    "simulated": true,
-    "pin": 17
+  "RPIR2":{
+      "simulated": true,
+      "pin": 17,
+      "runs_on": "PI1",
+      "name": "RPIR2"
   },
   "DMS": {
     "simulated": true,
@@ -45,6 +53,8 @@
   "DUS1": {
     "simulated": true,
     "trig_pin": 23,
-    "echo_pin": 24
+    "echo_pin": 24,
+    "runs_on": "PI1",
+    "name": "DUS1"
   }
 }
