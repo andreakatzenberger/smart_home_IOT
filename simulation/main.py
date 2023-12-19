@@ -1,6 +1,6 @@
 import threading
 from settings import load_settings
-from components.DHT import run_dht
+from components.dht import run_dht
 from components.DS1 import run_ds1
 from components.DL import run_dl
 from components.DPIR1 import run_dpir1

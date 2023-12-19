@@ -28,11 +28,11 @@ def parse_state(code):
         return "OFF"
 
 
-def run_dl_simulator(dl, delay, callback, stop_event, print_lock):
+def run_dl_simulator(dl, delay, callback, stop_event, print_lock, settings, publish_event):
     while True:
         code = dl.wait_for_key()
         state = parse_state(code)
         with print_lock:
-            callback(state)
+            callback(state, settings, publish_event)
         if stop_event.is_set():
             break
