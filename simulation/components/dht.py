@@ -1,5 +1,5 @@
-from simulators.DHT import run_dht_simulator
-from sensors.DHT import run_dht_loop, DHT
+from simulators.dht import run_dht_simulator
+from sensors.dht import run_dht_loop, DHT
 import threading
 import time
 
