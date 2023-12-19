@@ -25,11 +25,11 @@ class PIR(object):
         return self.state
 
 
-def run_pir_loop(pir, delay, callback, stop_event, print_lock):
+def run_pir_loop(pir, delay, callback, stop_event, print_lock, settings, publish_event):
     while True:
         time.sleep(delay)
         state = pir.read_dl()
         with print_lock:
-            callback(state)
+            callback(state, settings, publish_event)
         if stop_event.is_set():
             break
