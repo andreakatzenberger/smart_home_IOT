@@ -3,7 +3,6 @@ from influxdb_client import InfluxDBClient, Point
 from influxdb_client.client.write_api import SYNCHRONOUS
 import paho.mqtt.client as mqtt
 import json
-from influx_writes import *
 
 app = Flask(__name__)
 
