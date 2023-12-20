@@ -46,7 +46,7 @@ def run_dl_simulator(delay, callback, stop_event, publish_event, settings):
         global num
         num = 1
         while True:
-            time.sleep(7)  # Delay between readings (adjust as needed)
+            time.sleep(2)  # Delay between readings (adjust as needed)
             num = num -1
             callback(num, publish_event, settings)
             num = num +1
