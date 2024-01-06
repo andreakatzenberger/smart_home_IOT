@@ -5,6 +5,18 @@
         "runs_on": "PI1",
         "name": "DHT1 - Hallway"
     },
+    "DHT2": {
+      "simulated": true,
+      "pin": 17
+    },
+    "DS1": {
+      "simulated": true,
+      "pin": 17
+    },
+    "DB": {
+      "simulated": true,
+      "pin": 17
+    },
     "DPIR1": {
         "simulated": true,
         "pin": 17,
@@ -35,5 +47,16 @@
         "echo_pin": 24,
         "runs_on": "PI1",
         "name": "DUS1"
-    } 
+    },
+    "DMS": {
+      "simulated": true,
+      "R1": 25,
+      "R2": 8,
+      "R3": 7,
+      "R4": 1,
+      "C1": 12,
+      "C2": 16,
+      "C3": 20,
+      "C4": 21
+    }
 }
