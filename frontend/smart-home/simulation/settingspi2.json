@@ -1,0 +1,53 @@
+{
+    "GDHT":{
+        "simulated": true,
+        "pin": 17,
+        "runs_on": "PI2",
+        "name": "GDHT"
+    },
+    "RDHT3":{
+        "simulated": true,
+        "pin": 17,
+        "runs_on": "PI2",
+        "name": "RDHT3"
+    },
+    "GLCD":{
+        "simulated": true,
+        "SDA": 2,
+        "SCL": 3,
+        "runs_on": "PI2",
+        "name": "GLCD"
+    },
+    "GSG": {
+        "simulated": true,
+        "SDA": 2,
+        "SCL": 3,
+        "runs_on": "PI2",
+        "name": "GSG"
+    },
+    "RPIR3":{
+        "simulated": true,
+        "pin": 17,
+        "runs_on": "PI2",
+        "name": "RPIR3"
+    },
+    "DPIR2":{
+        "simulated": true,
+        "pin": 17,
+        "runs_on": "PI2",
+        "name": "DPIR2"
+    },
+    "DUS2":{
+        "simulated": true,
+        "pin_trig": 17,
+        "pin_echo": 16,
+        "runs_on": "PI2",
+        "name": "DUS2"
+    },
+    "DS2":{
+        "simulated": true,
+        "pin": 17,
+        "runs_on": "PI2",
+        "name": "DS2"
+    }
+}   
