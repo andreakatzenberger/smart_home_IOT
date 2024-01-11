@@ -1,0 +1,19 @@
+<div class="row text-center m-5">
+    <h1>Alarm</h1>
+</div>
+
+<div class="row mx-5">
+    <div class="col-12">
+        <iframe
+            src="http://localhost:3000/d/f1642a53-95e5-487f-a7a4-a3c083cd5e17/alarm?orgId=1&from=1704670222423&to=1704671122423&viewPanel=1"
+            width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+
+</div>
+
+<div *ngIf="alarmStatus === true" class="row text-center" >
+    <div >
+        <button (click)="deactivateButton()" style="background-color: rgb(255, 111, 0); color: black; border: 0; width: 200px;" >Deactivate</button>
+
+    </div>
+</div>
