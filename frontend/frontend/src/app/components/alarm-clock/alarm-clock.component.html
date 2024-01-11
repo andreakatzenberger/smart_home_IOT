@@ -1,0 +1,20 @@
+<div class="row text-center m-5">
+    <h1>Alarm clock</h1>
+</div>
+
+
+<div class="row text-center">
+<div class="margin-left">
+    <h2>Choose time</h2>
+    <input placeholder="Time" [ngxTimepicker]="picker" [format]="24">
+    <ngx-material-timepicker #picker (timeSet)="onTimeSet($event)"></ngx-material-timepicker>
+    <div *ngIf="errorMessage" class="error-message">Alarm clock time can not be empty</div>
+</div>
+<div class="margin-left mt-3">
+    <button class="register" (click)="onSetAlarmClick()">Set alarm clock</button>
+</div>
+
+<div class="margin-left mt-3">
+    <button class="register" (click)="turnOffClock()">Stop Clock</button>
+</div>
+</div>

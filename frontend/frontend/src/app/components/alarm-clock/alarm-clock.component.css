@@ -1,0 +1,65 @@
+/* alarm-clock.component.css */
+
+/* Stilizujemo input polje */
+input {
+    padding: 8px;
+    font-size: 16px;
+    width: 150px;
+  }
+  
+  /* Stilizujemo ngx-material-timepicker */
+  .ngx-timepicker {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Stilizujemo dugme "OK" u ngx-material-timepicker */
+  .ngx-material-timepicker-dial .dial-footer .ok-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* Stilizujemo tekst iznad ngx-material-timepicker */
+  .ngx-material-timepicker-content .header-title {
+    color: #007bff;
+    font-size: 20px;
+  }
+  
+  /* Stilizujemo strelice za povećanje i smanjenje u ngx-material-timepicker */
+  .ngx-material-timepicker-content .timepicker-timer .timer-section .arrow {
+    color: #007bff;
+  }
+  
+  /* Stilizujemo pozadinu ngx-material-timepicker */
+  .ngx-material-timepicker-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .margin-left{
+    margin-left: 1%;
+  }
+  .register{
+    color:#073e66;
+    background-color: white;
+    border: 2px solid #073e66;
+    margin-top: 7px;
+    width: 15%;
+    padding:16px 26px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+}
+.register:hover{
+    color: white;
+    background-color: #073e66;
+    transition: .3s ease-in-out;
+}
+.error-message {
+    color: red;
+    margin-top: 8px;
+  }

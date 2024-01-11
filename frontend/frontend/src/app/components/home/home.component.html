@@ -1,0 +1,124 @@
+<div class="row main-row mt-2 mx-2 text-center">
+    <div class="col-6">
+        <div class="row">
+            <div class="col-8  family" style="width: 470px;" >
+                <div class="row mt-5">
+                    <div class="text-start  mx-5 " style="font-size: xx-large;">Family room</div>
+
+                </div>
+            </div>
+            <div class="col-4  dinette">
+                <div class="row mt-5">
+                    <div class="text-start  mx-5 " style="font-size: xx-large;">Dinette</div>
+                    <div class="text-start sensors  mx-5 " (click)="showSensor('RPIR4')">RPIR4</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-5  stairs">
+                <div class="row mt-5">
+                    <div class="text-start  mx-5 " style="font-size: xx-large;">Stairs</div>
+
+                    <div class="text-start sensors mx-5 " (click)="showSensor('RPIR2')">RPIR2</div>
+                </div>
+            </div>
+         
+            <div class="col-6 kitchen" style=" padding-left: 8%">
+                <div class="row mt-5">
+                    <div class="text-start  mx-5" style="font-size: xx-large;">Kitchen</div>
+                    <div class="text-start sensors mx-5  " (click)="showSensor('RPIR3')">RPIR3</div>
+                    <!-- <div class="text-start sensors mx-5" (click)="showSensor('RDHT3')">RDHT3</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="row">
+            <div class="col-12  ownerssuite">
+                <div class="row mt-5">
+                    <div class="text-start  mx-5 " style="font-size: xx-large;">Owners suite</div>
+
+                    <!-- <div class="text-start sensors mx-5  mt-5" (click)="showSensor('RDHT4')">RDHT4</div> -->
+
+                    <div class="text-start sensors mx-5" (click)="showSensor('BB')">BB</div>
+
+                    <div class="text-start sensors mx-5" (click)="showSensor('B4SD')">B4SD</div>
+
+                    <!-- <div class="text-start sensors mx-5" (click)="showSensor('BIR')">BIR</div>
+
+                    <div class=" text-start sensors mx-5" (click)="showSensor('BRGB')">BRGB</div> -->
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-6  wic">
+                <div class="text-start  mx-5   mt-5" style="font-size: xx-large;">W.I.C</div>
+                <div class="text-start sensors mx-5  " (click)="showSensor('GSG')">GSG</div>
+
+            </div>
+            <div class="col-6  obath">
+                <div class="text-start  mx-5   mt-5" style="font-size: xx-large;">O.BATH</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row main-row  text-center mx-2 mb-2 ">
+    <div class="col-3" >
+        <div class="row">
+            <div class="col-12  bedroom3">
+                <div class="text-start  mx-5   mt-5" style="font-size: xx-large;">Bedroom 3</div>
+                <!-- <div class="text-start sensors mx-5   mt-5" (click)="showSensor('RDHT3')">RDHT3</div> -->
+
+            </div>
+            <div class="col-12  bath">
+                <div class="text-start  mx-5   mt-5" style="font-size: xx-large;">Bath</div>
+                <div class="text-start sensors  mx-5   " (click)="showSensor('RPIR1')">RPIR1</div>
+
+            </div>
+            <div class="col-12  bedroom2">
+                <div class="text-start  mx-5   mt-5" style="font-size: xx-large;">Bedroom 2</div>
+                <!-- <div class="text-start sensors mx-5   mt-5" (click)="showSensor('RDHT1')">RDHT1</div> -->
+
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="row">
+            <div class="col-1 foyer">
+                <div class="row">
+                    <div class="text-start  mx-5   mt-5" style="font-size: xx-large; ">Familyfoyer</div>
+                    <!-- <div class="text-start sensors  mx-5   mt-5" (click)="showSensor('DMS')">DMS</div> -->
+
+                    <div class="text-start sensors  mx-5 " (click)="showSensor('DB')">DB</div>
+
+                    <!-- <div class="text-start sensors  mx-5  " (click)="showSensor('DS1')">DS1</div> -->
+                </div>
+            </div>
+            <!-- <div class="col-2  lndry">
+                <div class="text-start  mx-5   mt-5" style="font-size: xx-large;">LNDRY</div>
+                <div class="text-start sensors  mx-5   mt-5" (click)="showSensor('DS2')">DS2</div>
+                <div class="text-start sensors  mx-5 " (click)="showSensor('GLCD')">GLCD</div>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-12  coveredporch">
+                <div class="row">
+                    <div class="text-start  mx-5   mt-5" style="font-size: xx-large;">Covered porch</div>
+                    <div class="text-start sensors   mx-5   " (click)="showSensor('DUS1')">DUS1</div>
+                    <div class="text-start sensors  mx-5 " (click)="showSensor('DPIR1')">DPIR1</div>
+                    <div class="text-start sensors   mx-5 " (click)="showSensor('DL')">DL</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-5  garage">
+        <div class="text-start  mx-5   mt-5 " style="font-size: xx-large;">Garage</div>
+        <div class="text-start sensors   mx-5   " (click)="showSensor('DPIR2')">DPIR2</div>
+        <div class="text-start sensors mx-5" (click)="showSensor('DUS2')">DUS2</div>
+        <!-- <div class="text-start sensors mx-5" (click)="showSensor('GDHT')">GDHT</div> -->
+
+    </div>
+</div>
