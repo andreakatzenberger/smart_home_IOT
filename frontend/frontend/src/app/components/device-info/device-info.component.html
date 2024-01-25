@@ -1,0 +1,66 @@
+<div class="row text-center my-3">
+    <div class="col-12">
+        <h1>{{this.deviceName}}</h1>
+    </div>
+</div>
+<div class="row mx-2 text-center">
+    
+    <table>
+        <tr>
+          <td>
+            <div *ngFor="let measure of measurements" class="measurement-info">
+              <h1>{{ measure._measurement }}</h1>
+              <h2>Value: {{ measure._value }}</h2>
+              <h2>Time: {{ measure._time | date:'dd/MM/yyyy HH:mm' }}</h2>
+            </div>
+          </td>
+        </tr>
+      </table>
+      
+      
+</div>
+<div class="row text-center mx-2 my-3">
+    <div class="col-12" *ngIf="deviceName === 'RDHT1'">
+        <iframe src="http://localhost:3000/d/d2116b00-3f0d-45a9-a4d4-eb66b8f475d6/55?orgId=1&from=1704553765876&to=1704554665876&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'DL'">
+        <iframe src="http://localhost:3000/d/a4ce8219-d0ca-4b5b-8ea6-16cad99b4270/dl?orgId=1&from=1704620942489&to=1704642542490&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'DUS1'">
+        <iframe src="http://localhost:3000/d/b542614f-a3d0-4e61-b396-d56cfa52dc48/dus?orgId=1&from=1704547018554&to=1704568618554&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'DB'">
+        <iframe src="http://localhost:3000/d-solo/f065c3a2-c97e-4f48-a587-04a10e854772/dashboard-influx?orgId=1&from=1704366094210&to=1704387694210&panelId=9" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'DPIR1'">
+        <iframe src="http://localhost:3000/d/dbea8547-3320-43ed-9b37-757a6119e21b/dpir1?orgId=1&from=1704641232859&to=1704642132859&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'RPIR1'">
+        <iframe src="http://localhost:3000/d/c39c1afd-e368-4ebc-b8cb-f8691d90e162/rpir1?orgId=1&from=1704547443033&to=1704569043033&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'RPIR2'">
+        <iframe src="http://localhost:3000/d/e0474ff7-d82b-4af5-81d6-be81257a091f/rpir2?orgId=1&from=1704547385384&to=1704568985384&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'DUS2'">
+        <iframe src="http://localhost:3000/d/c10a71a4-664d-41f8-a1fa-4b0d79b63eca/dus2?orgId=1&from=1704646231353&to=1704647131353&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'DPIR2'">
+        <iframe src="http://localhost:3000/d/aa93d11d-bb09-4b32-89e7-97bc2dc3d27f/dpir2?orgId=1&from=1704646476945&to=1704647376945&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'GSG'">
+        <iframe src="http://localhost:3000/d/f7c65d7d-58f7-4755-9c09-8dbbefc16efb/gsg?orgId=1&from=1704646603334&to=1704647503334&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'RPIR3'">
+        <iframe src="http://localhost:3000/d/e0070735-6687-4037-8718-8af9a42067e4/rpir3?orgId=1&from=1704646445065&to=1704647345066&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'RPIR4'">
+        <iframe src="http://localhost:3000/d/ec2163c9-6877-4610-87fc-4d69f0370446/rpir4?orgId=1&from=1704652995727&to=1704653895728&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'BB'">
+        <iframe src="http://localhost:3000/d/b7dd0170-0660-43b0-bc28-a2e209968e6d/bb?orgId=1&from=1704655191524&to=1704656091524&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+    <div class="col-12" *ngIf="deviceName === 'B4SD'">
+        <iframe src="http://localhost:3000/d/e4539b40-5852-4dbf-b83b-ac15e0b94048/b4sd?orgId=1&from=1704655605716&to=1704656505716&viewPanel=1" width="100%" height="600px" style="padding-left: 20%;padding-right: 20%;" frameborder="0"></iframe>
+    </div>
+
+</div>

@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* .family{
+    height: 300px;
+    width: 780px;
+}
+.dinette{
+    height: 300px;
+    width: 780px;
+}
+.stairs{
+    height: 200px;
+    width: 780px;
+}
+.kitchen{
+    height: 200px;
+    width: 780px;
+}
+.ownerssuite{
+    height: 300px;
+    width: 800px;
+}
+.wic{
+    width: 360px;
+    height: 200px;
+}
+.obath{
+    width: 360px;
+    height: 200px;
+}
+.bedroom3{
+    width: 780px;
+    height: 300px;
+}
+.bath{
+    height: 400px;
+    width: 780px;
+}
+.bedroom2{
+    width: 780px;
+    height: 300px;
+}
+.foyer{
+    width:400px ;
+    height: 700px;
+}
+.lndry{
+    width: 380px;
+    height: 700px;
+}
+.coveredporch{
+    width: 780px;
+    height: 300px;
+}
+.garage{
+    width:800px;
+    height:1000px;
+
+} */
+.sensors{ 
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    position: relative;
+}
+.sensors:hover{
+    cursor: pointer;
+    font-size:x-large;
+    transition: .1s ease-in-out;
+}

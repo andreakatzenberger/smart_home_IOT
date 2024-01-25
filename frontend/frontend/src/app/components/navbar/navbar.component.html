@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg " style="background-color: rgb(255, 111, 0); height: 50px; margin-bottom: 20px;">
+  <a class="nav-logo" style="color: black; border: 0;" [routerLink]="['']">smarthome</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-button" [routerLink]="['alarm-clock']">Alarm Clock</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-button" [routerLink]="['house-alarm']">Alarm</a>
+      </li>
+      
+      <li class="nav-item active">
+        <a class="nav-button" [routerLink]="['house-status']">People</a>
+      </li>
+
+
+    </ul>
+  </div>
+</nav>

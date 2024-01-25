@@ -1,0 +1,8 @@
+  .nav-item a {
+    font-family: 'Novi Font', sans-serif; /* Zamenite 'Novi Font' sa željenim fontom */
+    font-size: 16px; /* Postavite veličinu fonta prema želji */
+    color: rgb(255, 255, 255); /* Postavite boju teksta prema želji */
+    text-decoration: none; /* Uklonite podvučeno linkovanje, ako je potrebno */
+ 
+    text-transform: lowercase;
+}

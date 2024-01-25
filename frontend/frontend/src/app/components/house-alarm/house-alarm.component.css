@@ -1,0 +1,19 @@
+.register{
+    color:#fe7919;
+    background-color: white;
+    border: 2px solid #f59948;
+    margin-top: 7px;
+    width: 15%;
+    padding:16px 26px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+}
+.register:hover{
+    color: white;
+    background-color: #f86300;
+    transition: .3s ease-in-out;
+}
